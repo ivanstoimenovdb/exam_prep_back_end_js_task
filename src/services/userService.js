@@ -3,7 +3,7 @@ import User from "../modules/user.js";
 import { generateAuthToken } from "../utils/jwtUtils.js";
 
 
-export async function register(email, password, repeatPassword){
+export async function register(email, userName, password, repeatPassword){
     const user = await User.findOne({email});
 
     if(user){
@@ -14,7 +14,7 @@ export async function register(email, password, repeatPassword){
         throw new Error('Password missmatch');
     }
 
-    const createdUser = await User.create({email, password});
+    const createdUser = await User.create({email, userName, password});
 
     const token = generateAuthToken(createdUser);
     
