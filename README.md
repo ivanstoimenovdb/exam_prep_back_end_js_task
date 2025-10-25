@@ -24,21 +24,26 @@ Exam prep task.
 
 ## Solve the mind block.
 
-- [X] Create block.
--   [X] Fix create blog navigation link.
--   [X] Add block controller.
--   [X] Add controller to routes.js.
--   [X] Add create action with render.
--   [X] Add 'blog' folder in views.
--   [X] Add create blog view.
--   [X] Add blog model.
--   [X] Modify create blog view.
--   [X] Create blog post action.
--   [X] Create blog  service.
--   [X] Add error handling 
-- [X] Blogs Catalog Page.
--   [X] Fix navigation link.
--   [X] Add catalog view.
--   [X] Add catalog get action with static blogs.
--   [X] Get all blogs service.
--   [X] Show dynamic blogs.
+###  Create block.
+- [X] Fix create blog navigation link.
+- [X] Add block controller.
+- [X] Add controller to routes.js.
+- [X] Add create action with render.
+- [X] Add 'blog' folder in views.
+- [X] Add create blog view.
+- [X] Add blog model.
+- [X] Modify create blog view.
+- [X] Create blog post action.
+- [X] Create blog  service.
+- [X] Add error handling 
+
+###  Blogs Catalog Page.
+- [X] Fix navigation link.
+- [X] Add catalog view.
+- [X] Add catalog get action with static blogs.
+- [X] Get all blogs service.
+- [X] Show dynamic blogs.
+
+### Home page blogs.
+- [X] Fix details link in blogs page.
+- [X] Fix details link in home page.

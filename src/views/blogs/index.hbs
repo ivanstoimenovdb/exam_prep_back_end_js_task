@@ -22,11 +22,13 @@
             <a href="#" class="btn-details">Details</a>
         </article>
     </article>
+    {{else}}
+    <!--If there are still no blogs in the database display:-->
+    <article class="not-available-blogs">
+        <h1>No blogs created yet.</h1>
+    </article>
     {{/each}}
 
-    <!--If there are still no blogs in the database display:-->
-    <!--<article class="not-available-blogs">
-                <h1>No blogs created yet.</h1>
-            </article>-->
+
 
 </section>
