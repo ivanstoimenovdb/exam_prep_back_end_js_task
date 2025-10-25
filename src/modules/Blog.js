@@ -1,0 +1,32 @@
+import { Schema, model, Types } from "mongoose";
+
+const blogSchema = new Schema({
+    title: {
+        type: String,
+        required: [true, 'Blog title is required'],
+    },
+    imageUrl: {
+        type: String,
+        required: [true, 'Blog image is required'],
+    },
+    content: {
+        type: String,
+        required: [true, 'Blog content is required'],
+    },
+    category: {
+        type: String,
+        required: [true, 'Blog category is required'],
+    },
+    // followList: {
+    //     type: String,
+    //     required: [true, 'Blog follow List is required'],
+    // },
+    owner: {
+        type: Types.ObjectId,
+        ref: 'User', 
+    },
+})
+
+const Blog = model('Blog', blogSchema);
+
+export default Blog;

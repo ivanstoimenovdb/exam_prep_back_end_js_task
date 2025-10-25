@@ -22,4 +22,17 @@ Exam prep task.
 - [X] Replace register layouts. 
 - [X] Replace register 404. 
 
+## Solve the mind block.
 
+- [ ] Create block.
+-   [X] Fix create blog navigation link.
+-   [X] Add block controller.
+-   [X] Add controller to routes.js.
+-   [X] Add create action with render.
+-   [X] Add 'blog' folder in views.
+-   [X] Add create blog view.
+-   [X] Add blog model.
+-   [X] Modify create blog view.
+-   [X] Create blog post action.
+-   [X] Create blog  service.
+-   [X] Add error handling 

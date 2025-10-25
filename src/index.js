@@ -35,7 +35,7 @@ app.engine('hbs', handlebars.engine({
             this.pageTitle = title;
         },
         getTitle() {
-            return this.pageTitle || 'Friendly world';
+            return this.pageTitle || 'Mind Blog';
         }
     }
 }));
