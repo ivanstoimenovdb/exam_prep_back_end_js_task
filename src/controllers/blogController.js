@@ -5,6 +5,12 @@ import { getErrorMessage } from "../utils/errorUtils.js";
 
 const blogController = Router();
 
+blogController.get('/', async (req, res) => {
+    const blogs = await blockService.getAllBlogs();
+
+    res.render('blogs', { blogs });
+})
+
 blogController.get('/create', isAuth,(req, res) => {
     res.render('blogs/create');
 })

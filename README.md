@@ -24,7 +24,7 @@ Exam prep task.
 
 ## Solve the mind block.
 
-- [ ] Create block.
+- [X] Create block.
 -   [X] Fix create blog navigation link.
 -   [X] Add block controller.
 -   [X] Add controller to routes.js.
@@ -36,3 +36,9 @@ Exam prep task.
 -   [X] Create blog post action.
 -   [X] Create blog  service.
 -   [X] Add error handling 
+- [X] Blogs Catalog Page.
+-   [X] Fix navigation link.
+-   [X] Add catalog view.
+-   [X] Add catalog get action with static blogs.
+-   [X] Get all blogs service.
+-   [X] Show dynamic blogs.
