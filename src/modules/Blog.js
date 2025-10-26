@@ -17,14 +17,14 @@ const blogSchema = new Schema({
         type: String,
         required: [true, 'Blog category is required'],
     },
-    // followList: {
-    //     type: String,
-    //     required: [true, 'Blog follow List is required'],
-    // },
     owner: {
         type: Types.ObjectId,
         ref: 'User', 
     },
+    followers: [{
+        type: Types.ObjectId,
+        ref: 'User',
+    }],
 })
 
 const Blog = model('Blog', blogSchema);

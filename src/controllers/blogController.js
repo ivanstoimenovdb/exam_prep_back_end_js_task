@@ -15,6 +15,28 @@ blogController.get('/create', isAuth,(req, res) => {
     res.render('blogs/create');
 })
 
+blogController.get('/:blogId/details', async (req, res) => {
+    const blogId = req.params.blogId;
+    const blog = await blogService.getOne(blogId);
+    const userId = req.user?.id;
+    const isOwner = blog.owner.equals(userId);
+
+    const followers = blog.followers.map(follower => follower.email).join(', ');
+    const isFollowing = blog.followers.some( follower => follower.equals(userId));
+
+    res.render('blogs/details', {blog, isOwner, followers, isFollowing});
+})
+
+blogController.get('/:blogId/follow', isAuth, async (req, res) =>{
+    const blogId = req.params.blogId;
+    const userId = req.user.id;
+
+    await blogService.follow(blogId, userId);
+
+    res. redirect(`/blogs/${blogId}/details`);
+
+})
+
 blogController.post('/create', isAuth, async (req, res) => {
     const blogData = req.body;
     const userId  = req.user.id;

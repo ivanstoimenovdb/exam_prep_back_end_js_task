@@ -47,3 +47,23 @@ Exam prep task.
 ### Home page blogs.
 - [X] Fix details link in blogs page.
 - [X] Fix details link in home page.
+
+### Blog details.
+- [X] Fix details link in blogs page.
+- [X] Fix details link in home page.
+- [X] show static details page.
+- [X] Add getOne method in blog service.
+- [X] Show dynamic details page (without author and followers).
+- [X] Show dynamic author.
+- [X] Hide buttons if not logged.
+- [X] Show edit and delete button if author.
+- [X] Show follow and already following buttons  if logged.
+- [X] Show dynamic followers.
+-   [X] Add followers in blog relations (module).
+-   [X] Add follow service method in blog service.
+-   [X] Add follow get action.
+-   [X] Fix follow link.
+
+
+### Bonus.
+- [ ] Sort last 3 recs.

@@ -3,12 +3,10 @@ import { blogService } from "../services/index.js";
 
 const homeController = Router();
 
-homeController.get('/', (req, res) => {
-    const latestBlogs = blogService.getLatest();
+homeController.get('/', async (req, res) => {
+    const latestBlogs = await blogService.getLatest();
 
     res.render('home', { blogs: latestBlogs });
-
-    res.render('home');
 });
 
 
