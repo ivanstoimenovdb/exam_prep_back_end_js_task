@@ -28,8 +28,12 @@ export function getOne(blogId){
     // after getting e-mail of owner.
     // return Blog.findById(blogId).populate('owner'); 
 
-    // after following
+    // after following functionality.
     return Blog.findById(blogId).populate(['owner', 'followers']); 
+}
+
+export function remove(blogId, userId) {
+    return Blog.findByIdAndDelete(blogId);
 }
 
 export  function create(blogData, userId) {

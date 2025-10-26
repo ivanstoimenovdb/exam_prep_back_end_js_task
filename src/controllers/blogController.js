@@ -37,6 +37,15 @@ blogController.get('/:blogId/follow', isAuth, async (req, res) =>{
 
 })
 
+blogController.get('/:blogId/delete', isAuth, async (req, res) => {
+    const blogId = req.params.blogId;
+    const userId = req.user.id;
+
+    await blogService.remove(blogId, userId);
+
+    res.redirect('/');
+})
+
 blogController.post('/create', isAuth, async (req, res) => {
     const blogData = req.body;
     const userId  = req.user.id;

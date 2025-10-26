@@ -64,6 +64,11 @@ Exam prep task.
 -   [X] Add follow get action.
 -   [X] Fix follow link.
 
+### Delete blog.
+- [] Fix navigation link.
+- [] Add delete action.
+- [] Service method for deletion in blog service.
+
 
 ### Bonus.
 - [ ] Sort last 3 recs.
