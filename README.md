@@ -65,9 +65,22 @@ Exam prep task.
 -   [X] Fix follow link.
 
 ### Delete blog.
-- [] Fix navigation link.
-- [] Add delete action.
-- [] Service method for deletion in blog service.
+- [X] Fix navigation link.
+- [X] Add delete action.
+- [X] Service method for deletion in blog service.
+
+### Edit blog.
+- [X] Fix navigation link.
+- [X] Add get Edit action.
+- [X] Show empty edit page.
+- [X] Show dynamicaly data.
+- [X] Edit dynamicaly with post method in controller.
+- [X] Add error handling.
+
+### Profile.
+- [X] Fix navigation.
+- [X] Show static profile page.
+- [] 
 
 
 ### Bonus.

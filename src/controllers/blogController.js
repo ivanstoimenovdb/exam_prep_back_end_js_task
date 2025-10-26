@@ -43,7 +43,42 @@ blogController.get('/:blogId/delete', isAuth, async (req, res) => {
 
     await blogService.remove(blogId, userId);
 
-    res.redirect('/');
+    res.redirect('/blogs');
+})
+
+blogController.get('/:blogId/edit', isAuth, async (req, res) => {
+    const blogId = req.params.blogId;
+
+    const blog = await blogService.getOne(blogId);
+
+    if(!blog.owner.equals(req.user.id)) {
+        throw new {
+            statusCode: 401,
+            message: 'Cannot edit blog that you are not owner.',
+        }
+    }
+
+    res.render('blogs/edit', { blog } );
+})
+
+// Hold for now... 
+blogController.post('/:blogId/edit', isAuth, async (req, res) => {
+    const blogId = req.params.blogId;
+    const userId = req.user.id;
+    const blogData = req.body;
+
+    try{
+        await blogService.edit(blogId, blogData);
+
+        res.redirect(`/blogs/${blogId}/details`);
+    }catch (err){
+        res.render('blogs/edit', {
+            blog: blogData,
+            error: getErrorMessage(err),
+        })
+    }
+
+
 })
 
 blogController.post('/create', isAuth, async (req, res) => {

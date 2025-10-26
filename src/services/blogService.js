@@ -32,8 +32,18 @@ export function getOne(blogId){
     return Blog.findById(blogId).populate(['owner', 'followers']); 
 }
 
-export function remove(blogId, userId) {
+export async function remove(blogId, userId) {
+    const blog = await Blog.findById(blogId);
+
+    if(!blog.owner.equals(userId)){
+        throw new Error('Cannot delete if not owner');
+    }
+
     return Blog.findByIdAndDelete(blogId);
+}
+
+export function edit(blogId, blogData){
+    return Blog.findByIdAndUpdate(blogId, blogData, {runValidators : true})
 }
 
 export  function create(blogData, userId) {
