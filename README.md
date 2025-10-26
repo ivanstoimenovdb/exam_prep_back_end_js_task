@@ -80,7 +80,9 @@ Exam prep task.
 ### Profile.
 - [X] Fix navigation.
 - [X] Show static profile page.
-- [] 
+- [X] Show dynamic user info.
+- [X] Get created blogs
+- [X] Get followed blogs.
 
 
 ### Bonus.

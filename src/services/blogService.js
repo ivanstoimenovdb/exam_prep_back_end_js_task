@@ -52,3 +52,12 @@ export  function create(blogData, userId) {
         owner: userId,
 });
 }
+
+export function getAllByOwner( ownerId ){
+    return Blog.find({ owner : ownerId });
+
+}
+
+export function getAllByFollower( follower ){
+    return Blog.find().in('followers', follower)
+}
